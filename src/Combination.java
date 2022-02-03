@@ -1,22 +1,31 @@
 import java.util.Random;
 
 public class Combination {
+    private String handVariant;
 
-    String randomCombination () {
-        Random random=new Random();
+    void randomCombination() {
+        Random random = new Random();
         int variant = random.nextInt(3);
-        String handVariant=null;
-        switch (variant){
+        switch (variant) {
             case 0:
-                handVariant="Камень";
+                handVariant = "Камень";
                 break;
             case 1:
-                handVariant="Ножницы";
+                handVariant = "Ножницы";
                 break;
             case 2:
-                handVariant="Бумага";
+                handVariant = "Бумагу";
                 break;
         }
+    }
+
+    public String getHandVariant() {
         return handVariant;
+    }
+
+    @Override
+    public String toString() {
+        return " показал " +
+                handVariant;
     }
 }
